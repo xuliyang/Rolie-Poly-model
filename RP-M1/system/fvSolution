@@ -1,0 +1,136 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.4.1                                 |
+|   \\  /    A nd           | Web:      http://www.openfoam.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version 2.0;
+    format ascii;
+
+    root "/opt/OpenFOAM/jovani-1.4.1/run/tutorials/viscoelasticFluidFoam";
+    case "Oldroyd-B";
+    instance "system";
+    local "";
+
+    class           dictionary;
+    object          fvSolution;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+
+    p 
+    {
+//	solver	 PBiCG;
+          solver      PCG;  
+          preconditioner  DIC;
+        tolerance        1e-08;
+        relTol           0.0;
+        minIter          0;
+        maxIter          3000;
+    };
+
+
+    U 
+    {
+	   solver	  PBiCG;
+ //           solver        CG;
+	    preconditioner   DILU;
+
+
+        minIter           0;
+        maxIter           1000;
+        tolerance         1e-8;
+        relTol            0.0;
+    };
+
+    p2
+    {
+//      solver   PBiCG;
+          solver      PCG;
+          preconditioner  DIC;
+        tolerance        1e-08;
+        relTol           0.0;
+        minIter          0;
+        maxIter          3000;
+    };
+
+
+    U2
+    {
+           solver         PBiCG;
+ //           solver        CG;
+            preconditioner   DILU;
+
+
+        minIter           0;
+        maxIter           1000;
+        tolerance         1e-8;
+        relTol            0.0;
+    };
+
+
+    sigmap 
+    {
+	   solver	  PBiCG;
+ //          solver      BiCGStab;
+	    preconditioner   DILU;
+        minIter           0;
+        maxIter           1000;
+        tolerance         1e-8;
+        relTol            0.0;
+
+    };
+
+
+    TensorA
+    {
+        solver PBiCG;
+        preconditioner DILU;
+        fieldChecker{
+                type spin;
+                upBound 100;
+                downBound 2;
+                beta    10;
+        }
+        boundaryChecker{
+                type    RTPI;
+                beta    10;
+        }
+        minIter           0;
+        maxIter           1000;
+        tolerance         1e-8;
+        relTol            0.0;
+
+  
+    };
+
+}
+
+PISO
+{
+    momentumPredictor yes;
+    nCorrectors    2;
+    nNonOrthogonalCorrectors 1;
+    pRefCell        0;
+    pRefValue       0;
+}
+
+relaxationFactors
+{
+    p               0.3;
+    U               0.5;
+    p2               0.3;
+    U2               0.5;
+    sigmap          0.3;
+}
+
+
+
+// ************************************************************************* //

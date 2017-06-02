@@ -1,0 +1,8 @@
+# vtk DataFile Version 2.0
+frontAndBack
+BINARY
+DATASET POLYDATA
+POINTS 0 float
+
+POLYGONS 0 0
+

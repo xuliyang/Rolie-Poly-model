@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="1345"
+   name=""
+   committed-date="2009-07-17T13:01:44.268634Z"
+   url="https://openfoam-extend.svn.sourceforge.net/svnroot/openfoam-extend/trunk/Core/OpenFOAM-1.5-dev/tutorials/viscoelasticFluidFoam/Oldroyd-B/0"
+   last-author="hjasak"
+   kind="dir"
+   uuid="e4e07f05-0c2f-0410-a05a-b8ba57e0c909"
+   repos="https://openfoam-extend.svn.sourceforge.net/svnroot/openfoam-extend"
+   revision="1665"/>
+<entry
+   committed-rev="1345"
+   name="p"
+   text-time="2010-02-19T19:46:03.000000Z"
+   committed-date="2009-07-17T13:01:44.268634Z"
+   checksum="5a21206cb8da037ad493fa4c6ac429f0"
+   last-author="hjasak"
+   kind="file"
+   prop-time="2010-02-19T19:46:03.000000Z"/>
+<entry
+   committed-rev="1345"
+   name="taufirst"
+   text-time="2010-02-19T19:46:03.000000Z"
+   committed-date="2009-07-17T13:01:44.268634Z"
+   checksum="f077f9e36aa62328ab45a389bf88e9b7"
+   last-author="hjasak"
+   kind="file"
+   prop-time="2010-02-19T19:46:03.000000Z"/>
+<entry
+   committed-rev="1345"
+   name="U"
+   text-time="2010-02-19T19:46:03.000000Z"
+   committed-date="2009-07-17T13:01:44.268634Z"
+   checksum="af0e2cdf05a810724befba361a04e2a1"
+   last-author="hjasak"
+   kind="file"
+   prop-time="2010-02-19T19:46:03.000000Z"/>
+<entry
+   committed-rev="1345"
+   name="tau"
+   text-time="2010-02-19T19:46:03.000000Z"
+   committed-date="2009-07-17T13:01:44.268634Z"
+   checksum="3427e2a789404d106d51ba553bccbf1e"
+   last-author="hjasak"
+   kind="file"
+   prop-time="2010-02-19T19:46:03.000000Z"/>
+</wc-entries>

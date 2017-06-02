@@ -1,0 +1,40 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.4                                   |
+|   \\  /    A nd           | Web:      http://www.openfoam.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version         2.0;
+    format          ascii;
+
+    root            "";
+    case            "";
+    instance        "";
+    local           "";
+
+    class           dictionary;
+    object          transportProperties;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+nus             nus [1 -1 -1 0 0 0 0] 0.08;
+lambdaD		lambdaD [0 0 1 0 0 0 0] 0.1;
+lambdaR		lambdaR [0 0 1 0 0 0 0] 0.01;
+nup		nup [1 -1 -1 0 0 0 0] 0.64;
+kappa           kappa [1 -1 -1 0 0 0 0] 0.64;
+rho             rho [1 -3 0 0 0 0 0] 90000;
+L_2             L_2 [0 0 0 0 0 0 0] 100;
+k               k [0 0 0 0 0 0 0] 1;
+epsilon         epsilon [0 0 -2 0 0 0 0] 1e-10;
+betaCCR         betaCCR [0 0 0 0 0 0 0] 0.1;
+xi              xi [0 0 0 0 0 0 0] 0.8;
+small           small [0 0 0 0 0 0 0] 1e-10;
+uT              uT [0 0 0 0 0 0 0] (1 0 0 0 1 0 0 0 0); 
+diameter	diameter [0 1 0 0 0 0 0] 0.001;
+meanFlowRate	meanFlowRate [0 1 -1 0 0 0 0] 0.1;
+// ************************************************************************* //
